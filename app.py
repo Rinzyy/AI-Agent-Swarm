@@ -16,7 +16,6 @@ import autogen
 load_dotenv()
 brwoserless_api_key = os.getenv("BROWSERLESS_API_KEY")
 serper_api_key = os.getenv("SERP_API_KEY")
-# airtable_api_key = os.getenv("AIRTABLE_API_KEY")
 config_list = config_list_from_json("OAI_CONFIG_LIST")
 
 
@@ -101,42 +100,6 @@ def web_scraping(objective: str, url: str):
         print(f"HTTP request failed with status code {response.status_code}")        
 
 
-# # Function for get airtable records
-# def get_airtable_records(base_id, table_id):
-#     url = f"https://api.airtable.com/v0/{base_id}/{table_id}"
-
-#     headers = {
-#         'Authorization': f'Bearer {airtable_api_key}',
-#     }
-
-#     response = requests.request("GET", url, headers=headers)
-#     data = response.json()
-#     print(data)
-#     return data
-
-
-# # Function for update airtable records
-
-# def update_single_airtable_record(base_id, table_id, id, fields):
-#     url = f"https://api.airtable.com/v0/{base_id}/{table_id}"
-
-#     headers = {
-#         'Authorization': f'Bearer {airtable_api_key}',
-#         "Content-Type": "application/json"
-#     }
-
-#     data = {
-#         "records": [{
-#             "id": id,
-#             "fields": fields
-#         }]
-#     }
-
-#     response = requests.patch(url, headers=headers, data=json.dumps(data))
-#     data = response.json()
-#     return data
-
-
 # ------------------ Create agent ------------------ #
 
 # Create user proxy agent
@@ -179,10 +142,6 @@ group_chat_manager = autogen.GroupChatManager(groupchat=groupchat, llm_config={"
 
 # ------------------ start conversation ------------------ #
 message = """
-Research and analyze the current state of the cryptocurrency market. Begin by providing an overview of the market's performance over the last six months, including significant price movements of major cryptocurrencies like Bitcoin, Ethereum, and others. Highlight any notable trends or patterns that have emerged during this period.
-Next, delve into factors influencing these market trends. Discuss economic, technological, regulatory, and global events that have had an impact on cryptocurrency prices and investor sentiment. Include analysis of market volatility, liquidity, and trading volumes.
-Then, explore advancements in blockchain technology and their implications for the crypto market. Examine any new cryptocurrencies or tokens that have gained prominence and the reasons behind their success or failure.
-Also, analyze the role of institutional investors and government regulations in shaping the crypto market's trajectory. Discuss how different countries' stances on cryptocurrencies are affecting the market, and identify emerging regulatory trends.
-Finally, provide an outlook for the future of the cryptocurrency market. Consider potential technological innovations, regulatory changes, and economic factors that could influence market dynamics. Offer insights into possible future trends and investment opportunities in the crypto space.
+Research about the latest Creating large language model cheap and efficient with all the tool in 2023
 """
 user_proxy.initiate_chat(group_chat_manager, message=message)
