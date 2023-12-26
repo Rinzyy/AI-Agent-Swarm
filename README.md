@@ -25,7 +25,7 @@ This README has been updated to include instructions for setting up a virtual en
        ```
 
 2. **Install Dependencies**:
-   - Install the required libraries using the `requirements.txt` file. Run the command:
+   - Install the required libraries. Run the command:
      ```bash
      pip install requests beautifulsoup4 dotenv langchain autogen
      ```
