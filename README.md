@@ -1,6 +1,6 @@
 ### AI-Agent Swarm
 
-This README has been updated to include instructions for setting up a virtual environment, activating it, and running the script. It provides guidance on editing, setting up, and using the Python script with functionalities for web scraping, summarization, and making Google searches using various APIs and models.
+This project integrates Python and AI to enable multiple AI agents to collaborate, achieving complex data processing tasks beyond the capability of a single AI. Key features include advanced web scraping, intelligent summarization, and enhanced Google search functionality, utilizing various APIs and models. This approach significantly improves data gathering and analysis, making it ideal for comprehensive research and complex problem-solving in various fields.
 
 #### Prerequisites
 
